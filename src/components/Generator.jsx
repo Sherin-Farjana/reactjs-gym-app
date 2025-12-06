@@ -3,6 +3,7 @@ import SectionWrapper from './SectionWrapper'
 import { SCHEMES, WORKOUTS } from '../utils/swoldier'
 import Button from './Button'
 
+// Reusable section header component
 function Header(props) {
     const { index, title, description } = props
     return (
@@ -16,33 +17,42 @@ function Header(props) {
     )
 }
 
+// Workout generator component
 export default function Generator(props) {
     const { muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout } = props
+
+    // Controls muscle selection dropdown
     const [showModal, setShowModal] = useState(false)
 
-    // let showModal = false
-
+    // Toggles muscle selection menu
     function toggleModal() {
         setShowModal(!showModal)
     }
 
+    // Handles muscle group selection logic
     function updateMuscles(muscleGroup) {
+        // Removes muscle if already selected
         if (muscles.includes(muscleGroup)) {
             setMuscles(muscles.filter(val => val !== muscleGroup))
             return
         }
 
+        // Limits selection to max 3 muscles
         if (muscles.length > 2) {
             return
         }
 
+        // Forces single selection for non-individual workouts
         if (poison !== 'individual') {
             setMuscles([muscleGroup])
             setShowModal(false)
             return
         }
 
+        // Adds muscle to selection
         setMuscles([...muscles, muscleGroup])
+
+        // Closes modal after reaching limit
         if (muscles.length === 2) {
             setShowModal(false)
         }
@@ -51,6 +61,8 @@ export default function Generator(props) {
 
     return (
         <SectionWrapper id={'generate'} header={"Build Your Path to Strength"} title={['It\'s', 'Beast Mode', 'o\'clock']}>
+
+            {/* Step 1: Workout type */}
             <Header index={'01'} title={'Choose your battle'} description={"Select the workout style you want to commit to."} />
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-5'>
                 {Object.keys(WORKOUTS).map((type, typeIndex) => {
@@ -64,6 +76,8 @@ export default function Generator(props) {
                     )
                 })}
             </div>
+
+            {/* Step 2: Muscle selection */}
             <Header index={'02'} title={'Define Your Targets'} description={"Select the muscle groups you want to focus on today."} />
             <div className='bg-slate-950  border border-solid border-white-400 rounded-lg flex flex-col'>
                 <button onClick={toggleModal} className='relative p-3 flex items-center justify-center'>
@@ -84,6 +98,8 @@ export default function Generator(props) {
                     </div>
                 )}
             </div>
+
+            {/* Step 3: Goal selection */}
             <Header index={'03'} title={'Set Your Mission'} description={"Pick the goal that aligns with your training mission."} />
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                 {Object.keys(SCHEMES).map((scheme, schemeIndex) => {

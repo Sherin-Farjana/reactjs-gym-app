@@ -1,16 +1,81 @@
-# React + Vite
+# Unstoppable - Your Ultimate Gym Workout Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive **muscle growth and workout planner web app** built using **React, JavaScript, and Tailwind CSS**, designed to generate personalized workout routines based on user-selected goals and muscle groups.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+**https://sherin-reactjs-gym-app.app/**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Swolenormous** is a **single-page React application** that helps users build structured workouts tailored to their selected muscle groups, workout style, and fitness goals.
+
+The app includes:
+
+- Selectable **workout styles** (poison)
+- **Target muscle group selection**
+- Custom **goal-oriented workout schemes**
+- Dynamically generated **workout plan** with exercises, sets, reps, and tempo
+- Interactive **sets tracker** for each exercise
+- Responsive design for desktops and mobile devices
+
+---
+
+## Features
+
+- Fully responsive UI using **Tailwind CSS**
+- Interactive **workout generator** based on user input
+- **Dynamic exercise cards** with sets, reps, tempo, and muscle info
+- Visual feedback for **sets completion**
+- Clean, modern UI styling with hover effects and gradients
+- Smooth scrolling between sections
+
+---
+
+## Tech Stack
+
+| Technology           | Purpose                       |
+| -------------------- | ----------------------------- |
+| **React (vite)**     | Frontend framework            |
+| **Javascript(ES6+)** | Logic & workout generation    |
+| **Tailwind CSS**     | Styling and responsive layout |
+| **Font Awesome**     | UI icons                      |
+
+---
+
+## Project Structure
+
+```
+REACTJS-GYM-APP/
+│
+├── src/
+│   ├── App.jsx            # Main application logic
+│   ├── main.jsx           # React entry point
+│   ├── components/
+│   │   ├── Hero.jsx        # Hero section with CTA
+│   │   ├── Generator.jsx   # Workout generator interface
+│   │   ├── Workout.jsx     # Render generated workout
+│   │   ├── ExerciseCard.jsx# Individual exercise card
+│   │   ├── SectionWrapper.jsx # Reusable section container
+│   │   └── Button.jsx      # Custom button component
+|   ├── utils/
+│   │   ├── function.js
+|   |   └── swoldier.js
+│   └── index.css           # Global styles
+│
+├── index.html             # Root HTML file
+└── README.md              # Documentation
+```
+
+---
+
+## Author
+
+**Sherin Farjana**  
+💼 Front End Developer | Specializing in C, C++, OpenGL, and Web Technologies  
+🔗 [LinkedIn](https://www.linkedin.com/in/sherin-farjana)  
+🔗 [GitHub](https://github.com/Sherin-Farjana)

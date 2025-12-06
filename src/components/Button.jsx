@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Reusable button component
 export default function Button(props) {
     const { text, func } = props
     return (
