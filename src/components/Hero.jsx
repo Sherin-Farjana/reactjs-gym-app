@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[1000px] w-full mx-auto p-4'>
       <div className='flex flex-col gap-4'>
+        
         {/* Main intro text */}
         <p className='font-medium'>THE GRIND STARTS NOW</p>
 

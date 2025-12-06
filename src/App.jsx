@@ -34,7 +34,6 @@ function App() {
     }
   }, [workout])
 
-
   return (
     <main className='min-h-screen flex flex-col bg-gradient-to-r from-purple-900 via-indigo-900 to-grey to-[#24243e] text-white text-sm sm:text-base'>
       <Hero />

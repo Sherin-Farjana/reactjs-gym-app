@@ -6,6 +6,7 @@ export default function SectionWrapper(props) {
 
   return (
     <section id={id} className='min-h-screen flex flex-col gap-10'>
+        
       {/* Section header */}
       <div className='bg-indigo-900/50 py-10 flex flex-col gap-2 justify-center items-center p-4'>
         <p className='uppercase font-medium'>{header}</p>
