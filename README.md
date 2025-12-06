@@ -6,7 +6,7 @@ A modern, interactive **muscle growth and workout planner web app** built using 
 
 ## Live Demo
 
-**https://sherin-reactjs-gym-app.app/**
+**https://sherin-reactjs-gym-app.netlify.app/**
 
 ---
 
