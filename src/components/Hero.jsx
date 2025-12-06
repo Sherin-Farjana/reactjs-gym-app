@@ -3,13 +3,13 @@ import Button from './Button'
 
 export default function Hero() {
     return (
-        <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[800px] w-full mx-auto p-4'>
+        <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[1000px] w-full mx-auto p-4'>
             <div className='flex flex-col gap-4'>
 
-                <p>IT'S TIME TO GET</p>
-                <h1 className='uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>Swole<span className='text-blue-400'>normous</span></h1>
+                <p className='font-medium'>THE GRIND STARTS NOW</p>
+                <h1 className='uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>Become <span className='text-blue-400'>Unstoppable</span></h1>
             </div>
-            <p className='text-sm md:text-base font-light'>I hereby acknowledgement that I may become <span className='text-blue-400 font-medium'>unbelievably swolenormous</span> and accept all risks of becoming the local <span className='text-blue-400 font-medium'>mass montrosity</span>, afflicted with severe body dismorphia, unable to fit through doors.</p>
+            <p className='text-md md:text-base font-medium'>Step into the zone, push past your limits, and <span className='text-blue-400 font-medium'> build the physique</span> you’ve always wanted. <span className='text-blue-400 font-medium'>Strength, size, discipline</span>—this is where your transformation begins.</p>
             <Button func={() => {
                 window.location.href = '#generate'
             }} text={"Accept & Begin"}></Button>
